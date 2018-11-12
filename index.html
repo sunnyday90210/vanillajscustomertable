@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VisionPro Customer Software</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark mb-3 py-0">
+      <div class="container">
+        <a href="/" class="navbar-brand">Vision<span>Pro</span></a>
+        <div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="/" class="nav-link text-white">
+                <i class="fas fa-question"></i> Help
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/" class="nav-link text-white">
+                <i class="fas fa-cog"></i> Settings
+                <i class="fas fa-sort-down"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/" class="nav-link text-white">
+                <i class="fas fa-user"></i> Amin.Eshaq(demo)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Customer Center</h1>
+      <div class="card card-body mb-3">
+        <h2>
+          Add Customer <i onClick="showForm()" class="fas fa-user-plus"></i>
+        </h2>
+        <form
+          onsubmit="event.preventDefault(); onFormSubmit();"
+          id="hideform"
+          class="d-none"
+        >
+          <div class="form-group">
+            <label>Company*</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Company Name"
+              name="company"
+              id="company"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Name*</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Full Name"
+              name="name"
+              id="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Address</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Address"
+              name="address"
+              id="address"
+            />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Phone"
+              name="phone"
+              id="phone"
+            />
+          </div>
+          <div class="form-group">
+            <label>Comments</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Comments"
+              name="comments"
+              id="comments"
+            />
+          </div>
+          <div class="form-action-buttons d-inline-block">
+            <button
+              type="submit"
+              class="btn btn-primary d-inline-block"
+              value="Submit"
+            >
+              Submit
+            </button>
+            <button
+              id="cancel"
+              class="d-none btn btn-warning"
+              onclick="resetForm()"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="card card-body mb-3">
+        <h2>View Customer</h2>
+        <table class="table" id="customerList">
+          <thead class="text-white">
+            <tr>
+              <th scope="col">Company</th>
+              <th scope="col">Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Comments</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="firstCustomer"></tr>
+            <tr>
+              <td class="text-uppercase font-weight-bold no-customer">
+                No Customers
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

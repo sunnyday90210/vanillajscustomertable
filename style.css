@@ -1,0 +1,20 @@
+.navbar {
+  background: tomato !important;
+}
+
+thead {
+  background: #333;
+}
+
+.no-customer {
+  display: none;
+}
+
+.fa-sort-down {
+  float: right;
+  padding: '1px';
+}
+
+.fa-user-plus {
+  cursor: pointer;
+}
